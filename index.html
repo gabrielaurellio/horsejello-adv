@@ -2,30 +2,72 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
+<!-- 1. Preload da imagem LCP (ANTES de qualquer CSS) -->
+<link rel="preload" as="image" href="images/reason-01.webp" fetchpriority="high">
+
+<!-- 2. Preconnects -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- 3. Meta tags -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>10 Reasons Men Over 50 Are Getting Hard Again Without Pills</title>
+
+<!-- 4. Fontes non-blocking -->
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+      media="print" onload="this.media='all'">
+<noscript>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap">
+</noscript>
+
+<!-- 5. PayDirect tracker (defer) -->
 <script src="https://paydirect-tracker.dugri.workers.dev/tracker.js" defer></script>
-<!-- Meta Pixel Code -->
+
+<!-- 6. Meta Pixel + Utmify — diferidos 3.5s após load + primeira interação -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2929169767439415');
-fbq('track', 'PageView');
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    if (!window._fbLoaded) {
+      window._fbLoaded = true;
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '2929169767439415');
+      fbq('track', 'PageView');
+    }
+  }, 3500);
+});
+['mousedown','touchstart','keydown','scroll'].forEach(function(e){
+  document.addEventListener(e, function init(){
+    document.removeEventListener(e, init);
+    if (!window._fbLoaded) {
+      window._fbLoaded = true;
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '2929169767439415');
+      fbq('track', 'PageView');
+    }
+  });
+});
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=2929169767439415&ev=PageView&noscript=1"
 /></noscript>
-<!-- End Meta Pixel Code -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   /* ── RESET & BASE ─────────────────────────────────────── */
   *{box-sizing:border-box;margin:0;padding:0;}
@@ -586,7 +628,7 @@ src="https://www.facebook.com/tr?id=2929169767439415&ev=PageView&noscript=1"
     <blockquote>"For years, men were told weak erections were about age, testosterone, or blood flow. All three explanations are wrong. Here's what's actually happening — and why it can be rebuilt."</blockquote>
 
     <div class="byline">
-      <img class="avatar" src="images/wade-brennan.jpg" alt="Wade Brennan" width="60" height="60">
+      <img class="avatar" src="images/wade-brennan.webp" alt="Wade Brennan" width="60" height="60">
       <div class="who">
         <span class="name">Wade Brennan</span>
         <span class="role">Formulator — 25 Years</span>
@@ -600,7 +642,7 @@ src="https://www.facebook.com/tr?id=2929169767439415&ev=PageView&noscript=1"
   <!-- 1 -->
   <section class="reason">
     <div class="imgslot">
-      <img src="images/reason-01.png" alt="Close-up of a sponge — half soft and porous, half hardened and grey" width="728" height="758" loading="eager">
+      <img src="images/reason-01.webp" alt="Close-up of a sponge — half soft and porous, half hardened and grey" width="728" height="758" fetchpriority="high" decoding="sync">
     </div>
     <h2><span class="num">REASON 01</span>Your Erections Aren't Failing Because Of Age. The Tissue That's Supposed To Swell Turned Into Scar.</h2>
     <p>Every man hears the same four words: it's normal at your age. That explanation is wrong, and it kept me stuck for two years.</p>
@@ -623,7 +665,7 @@ src="https://www.facebook.com/tr?id=2929169767439415&ev=PageView&noscript=1"
   <!-- 3 -->
   <section class="reason">
     <div class="imgslot">
-      <img src="images/reason-03.webp" alt="A garden hose kinked shut" width="728" height="758" loading="lazy">
+      <img src="images/reason-03.webp" alt="A garden hose kinked shut" width="728" height="758" loading="lazy" decoding="async">
     </div>
     <h2><span class="num">REASON 03</span>Why Viagra Stops Working — And Why The Dose Always Creeps Up</h2>
     <p>Viagra and Cialis do one thing: they increase how much blood arrives. That's it. They were built for a circulation problem.</p>
@@ -635,7 +677,7 @@ src="https://www.facebook.com/tr?id=2929169767439415&ev=PageView&noscript=1"
   <!-- 4 -->
   <section class="reason">
     <div class="imgslot">
-      <img src="images/reason-04.png" alt="Lab results printout on a kitchen table" width="728" height="758" loading="lazy">
+      <img src="images/reason-04.webp" alt="Lab results printout on a kitchen table" width="728" height="758" loading="lazy" decoding="async">
     </div>
     <h2><span class="num">REASON 04</span>Testosterone Isn't Your Problem Either — And Your Bloodwork Already Proved It</h2>
     <p>I did three months of replacement therapy. My lab numbers came back beautiful. My doctor looked at the paper and told me everything was fine. In bed, nothing changed.</p>
@@ -646,7 +688,7 @@ src="https://www.facebook.com/tr?id=2929169767439415&ev=PageView&noscript=1"
   <!-- 5 -->
   <section class="reason">
     <div class="imgslot">
-      <img src="images/reason-05.webp" alt="Four raw ingredients laid out on a bench" width="728" height="758" loading="lazy">
+      <img src="images/reason-05.webp" alt="Four raw ingredients laid out on a bench" width="728" height="758" loading="lazy" decoding="async">
     </div>
     <h2><span class="num">REASON 05</span>The Part Where I Show You How I Actually Pick An Ingredient</h2>
     <p>After 25 years formulating, I only ask one question about any ingredient: has this been tested in real men, more than once, by people with nothing to sell?</p>
@@ -661,7 +703,7 @@ src="https://www.facebook.com/tr?id=2929169767439415&ev=PageView&noscript=1"
   <!-- 6 -->
   <section class="reason">
     <div class="imgslot">
-      <img src="images/reason-06.png" alt="Man in his fifties waking up" width="728" height="758" loading="lazy">
+      <img src="images/reason-06.webp" alt="Man in his fifties waking up" width="728" height="758" loading="lazy" decoding="async">
     </div>
     <h2><span class="num">REASON 06</span>What Comes Back First Isn't What You Think</h2>
     <p>Most men expect the erection back first. It isn't.</p>
@@ -676,7 +718,7 @@ src="https://www.facebook.com/tr?id=2929169767439415&ev=PageView&noscript=1"
   <!-- 7 -->
   <section class="reason">
     <div class="imgslot">
-      <img src="images/reason-07.png" alt="Couple in their fifties on a couch" width="728" height="758" loading="lazy">
+      <img src="images/reason-07.webp" alt="Couple in their fifties on a couch" width="728" height="758" loading="lazy" decoding="async">
     </div>
     <h2><span class="num">REASON 07</span>Nothing To Time. Nothing To Hide In The Glovebox.</h2>
     <p>Pill-dependent sex has a texture to it and every man on it knows exactly what I mean. The 30-minute window. The calculation. Putting your own sex life on a calendar like a dentist appointment.</p>
@@ -687,7 +729,7 @@ src="https://www.facebook.com/tr?id=2929169767439415&ev=PageView&noscript=1"
   <!-- 8 -->
   <section class="reason">
     <div class="imgslot">
-      <img src="images/reason-08.png" alt="A pile of bricks on an empty lot" width="728" height="758" loading="lazy">
+      <img src="images/reason-08.webp" alt="A pile of bricks on an empty lot" width="728" height="758" loading="lazy" decoding="async">
     </div>
     <h2><span class="num">REASON 08</span>I Took The Horse Gelatin By Itself For Five Weeks And Felt Nothing</h2>
     <p>Pay attention here, because this is exactly what happened to you if you already tried the trick you saw online.</p>
@@ -711,7 +753,7 @@ src="https://www.facebook.com/tr?id=2929169767439415&ev=PageView&noscript=1"
   <!-- 9 -->
   <section class="reason">
     <div class="imgslot">
-      <img src="images/reason-09.png" alt="Empty bed with morning light" width="728" height="758" loading="lazy">
+      <img src="images/reason-09.webp" alt="Empty bed with morning light" width="728" height="758" loading="lazy" decoding="async">
     </div>
     <h2><span class="num">REASON 09</span>47,000+ Men Are Getting Morning Wood Back — The Daily Signal Their Tissue Is Rebuilding</h2>
     <p>Morning wood isn't random. It's your body running a maintenance cycle on the tissue overnight — testing the structure, confirming the system still works.</p>
@@ -723,11 +765,13 @@ src="https://www.facebook.com/tr?id=2929169767439415&ev=PageView&noscript=1"
   <!-- 10 -->
   <section class="reason">
     <div class="imgslot">
-      <img src="images/reason-10.png" alt="90-day guarantee seal and product jar" width="728" height="758" loading="lazy">
+      <img src="images/reason-10.webp" alt="90-day guarantee seal and product jar" width="728" height="758" loading="lazy" decoding="async">
     </div>
     <h2><span class="num">REASON 10</span>Try It For 90 Days And Risk Absolutely Nothing</h2>
     <p>90 days. Full bottle or empty. No return shipping. No restocking fee. Full refund, no questions.</p>
-    <p>90 days because that's how long real tissue repair takes. My first morning erection came on day six — real, and early. But the man having sex like he was thirty again was month three. Damaged tissue does not rebuild itself in a few weeks. That's biology, and nothing changes it.</p>
+    <p>90 days because that's how long a full rebuild takes.</p>
+    <p>The first signals come fast — mine was a morning erection on day six, and most men see something inside the first two weeks. That part is quick.</p>
+    <p>But the man having sex like he was thirty again was month three. The early signal tells you it's working. The full rebuild is what the 90 days are for.</p>
     <p>Thirty days isn't a guarantee. It's a trapdoor. It closes right before the part where the result shows up.</p>
     <p><span class="pop">So either this rebuilds what you lost, or you get every dollar back.</span> Those are the only two outcomes on the table.</p>
     <p>The window to rebuild this tissue is open right now. In two years it will be smaller.</p>
@@ -750,12 +794,12 @@ src="https://www.facebook.com/tr?id=2929169767439415&ev=PageView&noscript=1"
   <p class="rating"><span class="stars">★★★★★</span> <strong>4.8</strong> / 5 based on <strong>17,012</strong> verified reviews</p>
 
   <div class="bottle">
-    <img src="images/horsejello-product.png" alt="Horse Jello jar" width="400" height="400" style="width:100%;max-width:400px;height:auto;display:block;margin:0 auto;border-radius:16px;">
+    <img src="images/horsejello-product.webp" alt="Horse Jello jar" width="400" height="400" style="width:100%;max-width:400px;height:auto;display:block;margin:0 auto;border-radius:16px;">
   </div>
 
   <p class="save">BUY 3, GET 3 FREE — SAVE 70%</p>
   <p class="limited">Limited-time offer while stock lasts</p>
-  <p class="stock">⚠️ Only 12 units left in stock</p>
+  <p class="stock">⚠️ Only 17 units left in stock</p>
 
   <a class="cta" href="https://horsejello.healthhub.site/" target="_blank">
     Check Availability &amp; Claim My Discount
